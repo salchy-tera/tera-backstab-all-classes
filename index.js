@@ -95,7 +95,7 @@ module.exports = function Backstab(mod) {
 
 	mod.hook('C_USE_ITEM', 3, event => {
 		if(!enabled) return;
-		if(!bossloc) return false
+		if(event.id===6551 && !bossloc) return false
 		if(event.id === 6551) {
 			backstab(distance,0)
 			return false;
